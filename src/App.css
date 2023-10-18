@@ -62,5 +62,55 @@
   font-size: 2.5rem;
 }
 .pie {
-  height: 22.7rem;
+  height: 26.7rem;
 }
+
+.pie-chart-container {
+  display: inline-block;
+  position: relative;
+  margin-top: 82px;
+}
+
+.chart-label {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Style for the donut chart container */
+.center-label {
+  text-align: center;
+}
+
+/* Style for the label text */
+.center-label p {
+  font-size: 18px;
+  color: #333;
+  margin: 8px 0;
+}
+
+/* Style for the donut chart */
+.rd3-piechart {
+  width: 150px; /* Set your desired width */
+  height: 150px; /* Set your desired height */
+}
+
+ol, ul {
+  padding: 0 !important;
+  text-decoration: none !important;
+}
+ .evano {
+  margin-bottom: 0 !important;
+ }
+
+ .transition{
+  color: white !important;
+  text-decoration: none !important;
+ }
+
+ .padding {
+  padding: 1.625rem !important;
+ }

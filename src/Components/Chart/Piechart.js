@@ -1,37 +1,28 @@
 // import React from 'react';
-// import { Pie } from 'react-chartjs-2';
+// import DonutChart from 'react-donut-chart';
 
-// const PieChart = () => {
-//   const data = {
-//     labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4'],
-//     datasets: [
-//       {
-//         data: [30, 20, 25, 15],
-//         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#66BB6A'],
-//         hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#66BB6A'],
-//       },
-//     ],
-//   };
-
-//   const options = {
-//     cutoutPercentage: 70, // Adjust the size of the center hole
-//     tooltips: {
-//       enabled: false, // Disable tooltips
-//     },
-//   };
-
+// const DonutChartWithLabel = () => {
 //   return (
 //     <div>
-//       <Pie data={data} options={options} />
+//       <DonutChart
+//         data={[{
+//           label: 'Customers',
+//           value: 65,
+//         }]}
+//         height={150}
+//         width={150}
+//       />
 //       <div className="center-label">
-//         <p>Total</p>
-//         <p>100%</p>
+//         <p>65% Customers</p>
 //       </div>
 //     </div>
 //   );
 // };
 
-// export default PieChart;
+// export default DonutChartWithLabel;
+
+
+
 
 
 
@@ -39,11 +30,14 @@ import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const Piechart = () => {
-  const series = [44, 55, 41, 17, 15];
+  const series = [65,35];
 
   const options = {
     chart: {
       type: 'donut',
+      toolbar: {
+        show: false,
+      },
     },
     responsive: [
       {
@@ -51,8 +45,6 @@ const Piechart = () => {
         options: {
           chart: {
             width: 200,
-            outerHeight :300,
-            height :500
           },
           legend: {
             position: 'bottom',
@@ -63,11 +55,20 @@ const Piechart = () => {
   };
 
   return (
-    <div id="chart">
-      <ReactApexChart options={options} series={series} type="donut" />
+    <div className="text-center">
+  <div className="pie-chart-container">
+    <ReactApexChart options={options} series={series} type="donut" />
+    <div className="chart-label">
+      65%<br />
+      Total New<br />
+      Customers
     </div>
+  </div>
+</div>
+
   );
 };
 
 export default Piechart;
+
 

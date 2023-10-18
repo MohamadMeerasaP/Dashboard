@@ -1,14 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown, faArrowUp, faDollarSign, faFileLines, faMoneyBill, faNoteSticky, faSearch, faShoppingBag, faUpDown, faWallet } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowUp, faDollarSign, faFileLines,faSearch, faShoppingBag, faWallet } from '@fortawesome/free-solid-svg-icons';
 import BarChart from './Chart/Barcharts';
 import PieChart from './Chart/Piechart';
 import Table from './Chart/Table';
-import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 
 const Dashboard = () => {
   return (
-    <div className="ml-50 p-2.5" style={{backgroundColor:"#F5F6F8"}}>
+    <div className="ml-50 p-3.5 padding" style={{backgroundColor:"#F5F6F8"}}>
       {/* First Row */}
       <div className="flex justify-between items-center">
         <div className='ml-5 mt-3'>
@@ -26,12 +25,6 @@ const Dashboard = () => {
       <br/>
 
       {/* Second Row */}
-      {/* <div className="flex mt-4">
-        <Card title="Earning" value="$1,000" icon="icon-earning" percent="25%" />
-        <Card title="Order" value="50" icon="icon-order" percent="10%" />
-        <Card title="Income" value="$800" icon="icon-income" percent="15%" />
-        <Card title="Total Sales" value="$5,000" icon="icon-sales" percent="20%" />
-      </div> */}
       <div className="grid grid-cols-4 gap-8 mt-4 mb-2 text-black">
           <div className="overflow-hidden text-black bg-white rounded-lg">
             <div className="flex w-full mt-3 mb-3 h-20 cardh">
@@ -139,16 +132,29 @@ const Dashboard = () => {
       {/* Third Row */}
       <div className="mt-4 flex">
   <div className="w-3/4 mr-4">
-    <div className="overflow-hidden text-black bg-white rounded-lg">
-      <div className="float-left ml-5 mt-2">
-        <p className="font-extrabold text-xl mb-1">Overview</p>
-        <p className="text-gray-500 text-xs text-[#c8c8c8]">Monthly Earning</p>
-      </div>
-      <BarChart />
+  <div className="overflow-hidden text-black bg-white rounded-lg pie">
+  <div className="flex justify-between items-center ml-5 mt-2">
+    <div>
+      <p className="font-extrabold text-xl mb-1">Overview</p>
+      <p className="text-gray-500 text-xs text-[#c8c8c8]">Monthly Earning</p>
     </div>
+    <div className="ml-auto mb-2 mr-2 bg-grey-200">
+      <select>
+        <option value="last30days">Quarterly</option>
+        <option value="lastmonth">Annually</option>
+        {/* Add more options as needed */}
+      </select>
+    </div>
+  </div>
+  <BarChart />
+</div>
   </div>
   <div className="w-1/4">
     <div className="overflow-hidden text-black bg-white rounded-lg pie">
+      <div className="float-left ml-5 mt-2">
+        <p className="font-extrabold text-xl mb-1">Customers</p>
+        <p className="text-gray-500 text-xs text-[#c8c8c8]">Customers that buy Products</p>
+      </div>
       <PieChart />
     </div>
   </div>
@@ -156,115 +162,29 @@ const Dashboard = () => {
 
       {/* Fourth Row */}
       <div className="mt-4">
-      <div className="overflow-hidden text-black bg-white rounded-lg pie">
-      <MDBTable align='middle'>
-      <MDBTableHead>
-        <tr>
-          <th scope='col'>Name</th>
-          <th scope='col'>Title</th>
-          <th scope='col'>Status</th>
-          <th scope='col'>Position</th>
-          <th scope='col'>Actions</th>
-        </tr>
-      </MDBTableHead>
-      <MDBTableBody>
-        <tr>
-          <td>
-            <div className='d-flex align-items-center'>
-              <img
-                src='https://mdbootstrap.com/img/new/avatars/8.jpg'
-                alt=''
-                style={{ width: '45px', height: '45px' }}
-                className='rounded-circle'
-              />
-              <div className='ms-3'>
-                <p className='fw-bold mb-1'>John Doe</p>
-                <p className='text-muted mb-0'>john.doe@gmail.com</p>
-              </div>
-            </div>
-          </td>
-          <td>
-            <p className='fw-normal mb-1'>Software engineer</p>
-            <p className='text-muted mb-0'>IT department</p>
-          </td>
-          <td>
-            <MDBBadge color='success' pill>
-              Active
-            </MDBBadge>
-          </td>
-          <td>Senior</td>
-          <td>
-            <MDBBtn color='link' rounded size='sm'>
-              Edit
-            </MDBBtn>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div className='d-flex align-items-center'>
-              <img
-                src='https://mdbootstrap.com/img/new/avatars/6.jpg'
-                alt=''
-                style={{ width: '45px', height: '45px' }}
-                className='rounded-circle'
-              />
-              <div className='ms-3'>
-                <p className='fw-bold mb-1'>Alex Ray</p>
-                <p className='text-muted mb-0'>alex.ray@gmail.com</p>
-              </div>
-            </div>
-          </td>
-          <td>
-            <p className='fw-normal mb-1'>Consultant</p>
-            <p className='text-muted mb-0'>Finance</p>
-          </td>
-          <td>
-            <MDBBadge color='primary' pill>
-              Onboarding
-            </MDBBadge>
-          </td>
-          <td>Junior</td>
-          <td>
-            <MDBBtn color='link' rounded size='sm'>
-              Edit
-            </MDBBtn>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div className='d-flex align-items-center'>
-              <img
-                src='https://mdbootstrap.com/img/new/avatars/7.jpg'
-                alt=''
-                style={{ width: '45px', height: '45px' }}
-                className='rounded-circle'
-              />
-              <div className='ms-3'>
-                <p className='fw-bold mb-1'>Kate Hunington</p>
-                <p className='text-muted mb-0'>kate.hunington@gmail.com</p>
-              </div>
-            </div>
-          </td>
-          <td>
-            <p className='fw-normal mb-1'>Designer</p>
-            <p className='text-muted mb-0'>UI/UX</p>
-          </td>
-          <td>
-            <MDBBadge color='warning' pill>
-              Awaiting
-            </MDBBadge>
-          </td>
-          <td>Senior</td>
-          <td>
-            <MDBBtn color='link' rounded size='sm'>
-              Edit
-            </MDBBtn>
-          </td>
-        </tr>
-      </MDBTableBody>
-    </MDBTable>
+  <div className="overflow-hidden text-black bg-white rounded-lg">
+    <div className="flex justify-between items-center mb-3">
+      <p className="font-extrabold text-xl mb-0 mt-3 ml-3">Product Sell</p>
+      <div className="flex items-center p-2 rounded-lg ml-auto">
+        <div className="flex items-center">
+          <FontAwesomeIcon icon={faSearch} className="text-gray-600 mr-2 ml-2" />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="bg-transparent focus:outline-none w-full ml-4" // Add ml-4 for left margin
+          />
+        </div>
+        <select mb-1>
+          <option value="last30days">Last 30 Days</option>
+          <option value="lastmonth">Last Month</option>
+          {/* Add more options as needed */}
+        </select>
       </div>
-      </div>
+    </div>
+    <Table />
+  </div>
+</div>
+
     </div>
   );
 };
