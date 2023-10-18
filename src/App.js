@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from '../src/Components/Sidebar';
-import Home from '../src/Components/Home';
 import Product from '../src/Components/Product';
 import Dashboard from '../src/Components/Dashboard';
 import Income from '../src/Components/Income';
