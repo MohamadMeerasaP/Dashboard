@@ -17,8 +17,8 @@ function ResponsiveExample() {
         <tr>
           <td>
             <div className="d-flex align-items-start">
-              <img alt="" src="/profilepic.jpeg" width={50} />
-              <div className="ml-2 mt-2">
+              <img alt="" src="/table3.jpeg" className='img' width={50} />
+              <div className="ml-4">
                 <div className='text-left'>Abstract 3D</div>
                 <div className='text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               </div>
@@ -31,8 +31,8 @@ function ResponsiveExample() {
         <tr>
           <td>
             <div className="d-flex align-items-start">
-              <img alt="" src="/profilepic.jpeg" width={50} />
-              <div className="ml-2 mt-2">
+              <img alt="" src="/table1.jpeg" className='img' width={50} />
+              <div className="ml-4">
                 <div className='text-left'>Sarphens Illustrations</div>
                 <div className='text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               </div>
@@ -45,8 +45,8 @@ function ResponsiveExample() {
         <tr>
           <td>
             <div className="d-flex align-items-start">
-              <img alt="" src="/profilepic.jpeg" width={50} />
-              <div className="ml-2 mt-2">
+              <img alt="" src="/table2.jpeg" className='img' width={50} />
+              <div className="ml-4">
                 <div className='text-left'>Laptop</div>
                 <div className='text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               </div>
@@ -59,8 +59,8 @@ function ResponsiveExample() {
         <tr>
           <td>
             <div className="d-flex align-items-start">
-              <img alt="" src="/profilepic.jpeg" width={50} />
-              <div className="ml-2 mt-2">
+              <img alt="" src="/table4.jpeg" className='img' width={50} />
+              <div className="ml-4">
                 <div className='text-left'>Desktop</div>
                 <div className='text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               </div>

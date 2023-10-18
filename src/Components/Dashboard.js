@@ -139,7 +139,7 @@ const Dashboard = () => {
       <p className="text-gray-500 text-xs text-[#c8c8c8]">Monthly Earning</p>
     </div>
     <div className="ml-auto mb-2 mr-2 bg-grey-200">
-      <select>
+      <select className='select'>
         <option value="last30days">Quarterly</option>
         <option value="lastmonth">Annually</option>
         {/* Add more options as needed */}
@@ -166,15 +166,15 @@ const Dashboard = () => {
     <div className="flex justify-between items-center mb-3">
       <p className="font-extrabold text-xl mb-0 mt-3 ml-3">Product Sell</p>
       <div className="flex items-center p-2 rounded-lg ml-auto">
-        <div className="flex items-center">
+        <div className="flex items-center" style={{backgroundColor :"#E4E5E9", borderRadius:"6px", marginRight:"10px"}}>
           <FontAwesomeIcon icon={faSearch} className="text-gray-600 mr-2 ml-2" />
           <input
             type="text"
             placeholder="Search..."
-            className="bg-transparent focus:outline-none w-full ml-4" // Add ml-4 for left margin
+            className="outline-line search"
           />
         </div>
-        <select mb-1>
+        <select className='select'>
           <option value="last30days">Last 30 Days</option>
           <option value="lastmonth">Last Month</option>
           {/* Add more options as needed */}

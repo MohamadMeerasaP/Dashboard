@@ -50,7 +50,7 @@ const Sidebar = () => {
       {/* User Info Container */}
       <div className="mt-auto flex items-center bg-[#2D2D69] rounded">
         {/* Circular Picture */}
-        <div className="w-9 h-8 bg-gray-300 rounded-full mr-2 mb-3 ml-1">
+        <div className="w-9 h-8 bg-gray-300 rounded-full mr-2 mb-3 ml-1 mt-1">
           {/* You can add an image or an icon here */}
           <img src='/profilepic.jpeg' className='rounded-full'/>
         </div>

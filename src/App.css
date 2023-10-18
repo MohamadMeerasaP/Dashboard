@@ -114,3 +114,27 @@ ol, ul {
  .padding {
   padding: 1.625rem !important;
  }
+ select {
+  word-wrap: normal;
+    background-color: #E4E5E9;
+    padding: 6px;
+    border-radius: 6px;
+ }
+
+ .img {
+  vertical-align: middle;
+    width: 91px;
+    height: 50px;
+    border-radius: 6px;
+ }
+
+ .search {
+  background-color: #E4E5E9 !important;
+    padding: 6px;
+    border-radius: 6px;
+    margin-right: 10px;
+ }
+
+ p {
+  margin-bottom: 0 !important;
+ }
